@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Bulking Type</title>
+
+    <style>
+        /* === GLOBAL === */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4a3f4c, #7d677d);
+            font-family: 'Poppins', sans-serif;
+            color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* === NAVBAR === */
+        .topnav {
+            background-color: rgb(164, 166, 203);
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            overflow: visible;
+            z-index: 1000;
+        }
+
+        .topnav {
+            background-color: rgb(164, 166, 203);
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            overflow: visible;
+        }
+
+        .topnav a {
+            float: left;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 14px 16px;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.3s;
+            margin-right: 20px;
+        }
+
+        .topnav a:hover {
+            color: white;
+            background-color: #67596b;
+        }
+
+        .topnav a.sp:hover {
+            background-color: bisque;
+            color: black;
+        }
+
+        .dropdown {
+            float: left;
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            font-size: 13px;
+            border: none;
+            outline: none;
+            color: rgb(0, 0, 0);
+            padding: 14px 16px;
+            background-color: #67596b;
+            cursor: pointer;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        /* Hidden by default */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            /* below the button */
+            left: 0;
+        }
+
+        /* Links inside dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Hover effects */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show dropdown when hovering over the entire group */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change button color when hovering over dropdown */
+        .dropdown:hover .dropbtn {
+            background-color: #927e8c;
+        }
+
+        /* === PAGE TITLE === */
+        h1 {
+            margin-top: 120px;
+            font-size: 42px;
+            font-weight: 700;
+            color: #FFE4F1;
+        }
+
+        p.subtitle {
+            font-size: 18px;
+            margin-top: -10px;
+            color: #ffe2ea;
+        }
+
+        /* === CARDS === */
+        .container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h2 {
+            color: #ffeeff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #f3d9e6;
+            font-size: 15px;
+        }
+
+        .card button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            background-color: #FF6A9C;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #ff437f;
+            transform: scale(1.03);
+        }
+
+        /* === HOME BUTTON === */
+        .special-btn {
+            margin: 40px auto;
+            padding: 14px 40px;
+            background-color: #FF6A9C;
+            border: none;
+            border-radius: 14px;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .special-btn:hover {
+            background-color: #ff437f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="topnav">
+        <a href="index.html" class="sp">home page</a>
+
+        <div class="dropdown">
+            <button class="dropbtn" onclick="window.location.href='bulking.html'">Bulking Types</button>
+            <div class="dropdown-content">
+                <a href="clean-bulking.html">clean-bulking</a>
+                <a href="dirty-bulking.html">dirty-bulking</a>
+                <a href="lean-bulking.html">lean-bulking</a>
+            </div>
+        </div>
+
+        <a href="ibs.html">ibs</a>
+        <a href="celiac.html">celiac-disease</a>
+        <a href="cutting.html">cutting</a>
+        <a href="maintenance.html">maintenance</a>
+        <a href="general.html">healthy lifestyle</a>
+        <a href="diabetes.html">diabetes</a>
+    </div>
+
+    <!-- PAGE TITLE -->
+    <h1>💪 Choose Your Bulking Style</h1>
+    <p class="subtitle">Select the type of bulking that matches your fitness goal</p>
+
+    <!-- CARDS -->
+    <div class="container">
+        <div class="card">
+            <h2>🥦 Clean Bulking</h2>
+            <p>Build lean muscle with minimal fat gain.</p>
+            <button onclick="window.location.href='clean-bulking.html'">Select</button>
+        </div>
+
+        <div class="card">
+            <h2>🍔 Dirty Bulking</h2>
+            <p>Gain mass fast with a large calorie surplus.</p>
+            <button onclick="window.location.href='dirty-bulking.html'">Select</button>
+        </div>
+
+        <div class="card">
+            <h2>🍗 Lean Bulking</h2>
+            <p>Slow, clean muscle growth with balanced calories.</p>
+            <button onclick="window.location.href='lean-bulking.html'">Select</button>
+        </div>
+    </div>
+
+    <!-- HOME BUTTON -->
+    <button class="special-btn" onclick="window.location.href='index.html'">Back to Home</button>
+
+</body>
+
+</html>

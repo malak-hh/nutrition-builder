@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Nutrition Builder</title>
+
+  <style>
+    /* === GLOBAL STYLES === */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4a3f4c, #7d677d);
+      font-family: 'Poppins', sans-serif;
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* === TITLE === */
+    h1 {
+      margin-top: 40px;
+      font-size: 42px;
+      text-align: center;
+      font-weight: 700;
+      color: #FFE4F1;
+      letter-spacing: 1px;
+    }
+
+    /* === SUBTITLE === */
+    p {
+      text-align: center;
+      font-size: 20px;
+      width: 80%;
+      max-width: 600px;
+      color: #ffe2ea;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    span.highlight {
+      color: #ACE7FF;
+      font-weight: bold;
+    }
+
+    /* === FORM CONTAINER === */
+    .login-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      text-align: left;
+    }
+
+    label {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #ffffff;
+    }
+
+    /* === INPUT FIELDS === */
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 15px;
+      outline: none;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* === BUTTON = professional modern style === */
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #FF6A9C;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff437f;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🍎 My Nutrition Builder</h1>
+
+  <p>
+    Welcome to your <span class="highlight">personal health and fitness tracker</span>.
+    Learn about food, calories, and how to build muscle or lose fat safely.
+  </p>
+
+  <div class="login-box">
+    <form id="login-form">
+      
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" placeholder="Enter your age" required>
+
+      <label for="condition">Your Goal</label>
+      <select id="condition" required>
+        <option value="">-- select --</option>
+        <option value="ibs">IBS (irritable bowel syndrome)</option>
+        <option value="celiac">Celiac disease</option>
+        <option value="bulking">Bulking (muscle gain)</option>
+        <option value="cutting">Cutting (fat loss)</option>
+        <option value="maintenance">Maintenance (balance)</option>
+        <option value="general">Healthy lifestyle</option>
+        <option value="diabetes">Diabetes</option>
+      </select>
+
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+      const condition = document.getElementById("condition").value;
+
+      if (condition === "ibs") {
+        window.location.href = "ibs.html";
+      } else if (condition === "bulking") {
+        window.location.href = "bulking.html";
+      } else if (condition === "diabetes") {
+        window.location.href = "diabetes.html";
+      } else if (condition === "celiac") {
+        window.location.href = "celiac-disease.html";
+      } else if (condition === "general") {
+        window.location.href = "healthy-lifestyle.html";
+      } else if (condition === "cutting") {
+        window.location.href = "cutting.html";
+      } else if (condition === "maintenance") {
+        window.location.href = "maintenance.html";
+      } else {
+        alert("Please select a condition!");
+      }
+    });
+  </script>
+
+</body>
+</html>
